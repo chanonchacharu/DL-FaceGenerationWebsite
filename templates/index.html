@@ -51,12 +51,33 @@
             background-color: #333;
         }
     </style>
+    <style>
+        .nav-button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 20px auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .nav-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 </head>
 <body>
     <div class="container">
         <h1>Project 4 - Face Generation</h1>
         
+        <a href="/generate">
+            <button class="nav-button">Go to Image Generator</button>
+        </a>
+
         <img src="{{ url_for('static', filename='download.png') }}" alt="Original Images">
         <div class="description">This is a sample of original images from FFHQ Dataset.</div>
 
@@ -90,6 +111,22 @@
                 <li>Hair Color: Blonde (RGB: 0.73, 0.62, 0.36)</li>
             </ul>
         </div>
+
+        <h1>Generate Randome Image with 5 disentangling features!</h1>
+
+        <form action="/generate-image" method="post">
+            <button type="submit">Generate Images</button>
+        </form>
+
+        {% if initial_image %}
+            <h2>Initial Image:</h2>
+            <img src="{{ url_for('static', filename=initial_image) }}" alt="Initial Image">
+        {% endif %}
+
+        {% if modified_image %}
+            <h2>Modified Image:</h2>
+            <img src="{{ url_for('static', filename=modified_image) }}" alt="Modified Image">
+        {% endif %}
     </div>
 </body>
 </html>
