@@ -105,10 +105,18 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <!-- Existing content... -->
+        <h1>Generate Random Image with 5 Disentangling Features!</h1>
+
+        <!-- Image Generation Form -->
+        <form action="/generate-image" method="post">
+            <button type="submit" class="nav-button">Generate Images</button>
+        </form>
+
+        <a href="/">
+            <button class="nav-button">Back to Home</button>
+        </a>
 
         {% if initial_image %}
             <h2>Initial Image:</h2>
