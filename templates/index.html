@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Display</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .description {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <div class="container">
+        <h1>Project 4 - Face Generation</h1>
+        
+        <img src="{{ url_for('static', filename='download.png') }}" alt="Original Images">
+        <div class="description">This is a sample of original images from FFHQ Dataset.</div>
+
+        <img src="{{ url_for('static', filename='download (1).png') }}" alt="Baby Boomer">
+        <div class="description">
+            <strong>Baby Boomer:</strong> 
+            Short summaries of these three disentangling features:
+            <ul>
+                <li>Pose Control: Facing Front</li>
+                <li>Age Control: 70 years</li>
+                <li>Hair Color: White (RGB: 0.90, 0.90, 0.90)</li>
+            </ul>
+        </div>
+
+        <img src="{{ url_for('static', filename='download (2).png') }}" alt="Feature Summary">
+        <div class="description">
+            <strong>Features Summary:</strong>
+            <ul>
+                <li>Front Facing Illumination</li>
+                <li>Facial Expression: Big Smile</li>
+                <li>Hair Color: Black (RGB: 0.08, 0.08, 0.08)</li>
+            </ul>
+        </div>
+
+        <img src="{{ url_for('static', filename='download (3).png') }}" alt="Features Summary">
+        <div class="description">
+            <strong>Features Summary:</strong>
+            <ul>
+                <li>Pose Control: 30 degrees horizontal, -10 degrees vertical</li>
+                <li>Age Control: 25 years</li>
+                <li>Hair Color: Blonde (RGB: 0.73, 0.62, 0.36)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
