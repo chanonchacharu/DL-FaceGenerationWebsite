@@ -68,19 +68,47 @@
             background-color: #45a049;
         }
     </style>
+    <style>
+        img {
+            width: 50%; /* Smaller size */
+            height: auto;
+            display: block;
+            margin: 20px auto; /* Centered */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .features-list {
+            background-color: #e7e7e7;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: left;
+            margin: 20px auto;
+            width: 60%;
+        }
+
+        .features-list h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        .features-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.4;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Generate Random Image with 5 Disentangling Features!</h1>
-
-        <!-- Image Generation Form -->
-        <form action="/generate-image" method="post">
-            <button type="submit" class="nav-button">Generate Images</button>
-        </form>
-
-        <a href="/">
-            <button class="nav-button">Back to Home</button>
-        </a>
+        <!-- Existing content... -->
 
         {% if initial_image %}
             <h2>Initial Image:</h2>
@@ -93,14 +121,15 @@
         {% endif %}
 
         {% if features %}
-            <h2>Features Used:</h2>
-            <ul>
-                {% for key, value in features.items() %}
-                    <li>{{ key }}: {{ value }}</li>
-                {% endfor %}
-            </ul>
+            <div class="features-list">
+                <h2>Features Used:</h2>
+                <ul>
+                    {% for key, value in features.items() %}
+                        <li><strong>{{ key }}:</strong> {{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         {% endif %}
-        
     </div>
 </body>
 </html>
