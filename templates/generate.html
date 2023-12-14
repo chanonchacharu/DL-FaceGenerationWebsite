@@ -82,6 +82,16 @@
             <button class="nav-button">Back to Home</button>
         </a>
 
+        {% if initial_image %}
+            <h2>Initial Image:</h2>
+            <img src="{{ url_for('static', filename=initial_image) }}" alt="Initial Image">
+        {% endif %}
+
+        {% if modified_image %}
+            <h2>Modified Image:</h2>
+            <img src="{{ url_for('static', filename=modified_image) }}" alt="Modified Image">
+        {% endif %}
+
         {% if features %}
             <h2>Features Used:</h2>
             <ul>

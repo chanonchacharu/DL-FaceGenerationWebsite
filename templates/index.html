@@ -111,22 +111,6 @@
                 <li>Hair Color: Blonde (RGB: 0.73, 0.62, 0.36)</li>
             </ul>
         </div>
-
-        <h1>Generate Randome Image with 5 disentangling features!</h1>
-
-        <form action="/generate-image" method="post">
-            <button type="submit">Generate Images</button>
-        </form>
-
-        {% if initial_image %}
-            <h2>Initial Image:</h2>
-            <img src="{{ url_for('static', filename=initial_image) }}" alt="Initial Image">
-        {% endif %}
-
-        {% if modified_image %}
-            <h2>Modified Image:</h2>
-            <img src="{{ url_for('static', filename=modified_image) }}" alt="Modified Image">
-        {% endif %}
     </div>
 </body>
 </html>
