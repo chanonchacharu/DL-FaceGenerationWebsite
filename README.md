@@ -1,6 +1,8 @@
 # GAN: Face Generation 
 
+
 This project focuses on the application of Generative Adversarial Networks (GANs) for facial image generation, divided into two distinct parts. In the first segment, the CelebFaces Attributes Dataset (CelebA) is employed to train adversarial networks, where the generator and discriminator are developed to optimize performance based on training loss. This phase aims to generate high-quality and realistic facial images through effective GAN training. For the second part, the project utilizes a pre-trained model named GAN-Control, specifically designed for fine-tuned control over generated images. Leveraging this model allows for the manipulation of attributes such as age, pose, and expression in the generated faces. This integration empowers the generation of novel faces with precise control over three controllable/disentangling features, marking a significant advancement in the field of facial image synthesis and manipulation.
+
 ---
 
 ## Exploration
